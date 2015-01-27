@@ -13,7 +13,7 @@ patches: <patches|join( → )|pre_applied(%{$fg[yellow]%})|post_applied(%{$reset
 # turns username green if superuser, otherwise it is white
 
 # if superuser make the username red
-if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
+if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="gray"; fi
 
 # prompt
 PROMPT='[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%(!.#.$) '
