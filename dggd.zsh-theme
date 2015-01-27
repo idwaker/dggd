@@ -12,8 +12,8 @@ patches: <patches|join( → )|pre_applied(%{$fg[yellow]%})|post_applied(%{$reset
 # displays git status (if applicable in current folder)
 # turns username green if superuser, otherwise it is white
 
-# if superuser make the username green
-if [ $UID -eq 0 ]; then NCOLOR="green"; else NCOLOR="magenta"; fi
+# if superuser make the username red
+if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 
 # prompt
 PROMPT='[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%(!.#.$) '
